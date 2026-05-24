@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#ffc933">
+    <title>Abelha BA - Campus Criativo</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="app" class="bg-bedroom">
+        <div id="night-overlay" class="night-overlay hidden"></div>
+        <div id="room-bg" class="room-bg" aria-hidden="true"></div>
+
+        <header class="top-hud">
+            <button id="daily-sketch-btn" class="coin-card" type="button" aria-label="Receber bônus criativo">
+                <span class="coin-mark" id="coin-icon">$</span>
+                <span id="coin-count">250</span>
+            </button>
+
+            <div class="stats-strip" aria-label="Status da mascote">
+                <div class="stat-box" title="Alimento">
+                    <div class="stat-fill hunger" id="hunger-bar"></div>
+                    <span class="stat-icon" data-icon="canteen">F</span>
+                    <span class="stat-name">Fome</span>
+                </div>
+                <div class="stat-box" title="Saúde">
+                    <div class="stat-fill health" id="health-bar"></div>
+                    <span class="stat-icon" data-icon="care">+</span>
+                    <span class="stat-name">Saúde</span>
+                </div>
+                <div class="stat-box" title="Inspiração">
+                    <div class="stat-fill fun" id="fun-bar"></div>
+                    <span class="stat-icon" data-icon="sparkle">*</span>
+                    <span class="stat-name">Humor</span>
+                </div>
+                <div class="stat-box" title="Energia">
+                    <div class="stat-fill energy" id="energy-bar"></div>
+                    <span class="stat-icon" data-icon="wake">E</span>
+                    <span class="stat-name">Energia</span>
+                </div>
+                <div class="stat-box" title="Limpeza">
+                    <div class="stat-fill clean" id="clean-bar"></div>
+                    <span class="stat-icon" data-icon="bath">L</span>
+                    <span class="stat-name">Limpeza</span>
+                </div>
+            </div>
+
+            <div class="level-medal" aria-label="Nível">
+                <span>Nv</span>
+                <strong id="level-text">1</strong>
+            </div>
+        </header>
+
+        <nav class="room-switcher" aria-label="Trocar ambiente">
+            <button id="prev-room" class="round-btn" type="button" aria-label="Sala anterior">&lt;</button>
+            <div class="room-title-block">
+                <small>Belas Artes</small>
+                <h1 id="room-name">ATELIÊ</h1>
+            </div>
+            <button id="next-room" class="round-btn" type="button" aria-label="Próxima sala">&gt;</button>
+        </nav>
+
+        <main id="main-view" class="main-view">
+            <section id="scene-card" class="scene-card" aria-label="Área da mascote">
+                <div id="room-prop-left" class="room-prop prop-left"></div>
+                <div id="room-prop-right" class="room-prop prop-right"></div>
+                <div class="mascot-wrapper">
+                    <div id="mascot-container" class="mascot-container" role="img" aria-label="Abelha mascote"></div>
+                    <div class="mascot-shadow"></div>
+                </div>
+            </section>
+
+            <div id="minigame-container" class="minigame-overlay hidden">
+                <div class="minigame-header">
+                    <div>
+                        <small>Jogos BA</small>
+                        <strong>Escolha um jogo</strong>
+                    </div>
+                    <button id="close-minigame" class="close-x" type="button" aria-label="Fechar jogo">X</button>
+                </div>
+                <canvas id="minigame-canvas"></canvas>
+            </div>
+
+            <div id="shop-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="shop-title">
+                <div class="modal-header-pou">
+                    <button id="back-shop" class="back-btn hidden" type="button" aria-label="Voltar">&lt;</button>
+                    <h2 id="shop-title">Acervo</h2>
+                    <button id="close-shop" class="close-x" type="button" aria-label="Fechar acervo">X</button>
+                </div>
+                <div id="shop-content" class="shop-content-pou">
+                    <div id="shop-categories" class="shop-categories-grid"></div>
+                    <div id="shop-items" class="shop-list-pou hidden"></div>
+                </div>
+            </div>
+
+            <div id="closet-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="closet-title">
+                <div class="modal-header-pou">
+                    <button id="back-closet" class="back-btn hidden" type="button" aria-label="Voltar">&lt;</button>
+                    <h2 id="closet-title">Estilo</h2>
+                    <button id="close-closet" class="close-x" type="button" aria-label="Fechar estilo">X</button>
+                </div>
+                <div id="closet-content" class="shop-content-pou">
+                    <div id="closet-categories" class="shop-categories-grid"></div>
+                    <div id="closet-items" class="shop-list-pou hidden"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bottom-nav">
+            <div id="bottom-left" class="bottom-action-slot"></div>
+            <div id="bottom-center" class="bottom-action-slot bottom-action-main"></div>
+            <div id="bottom-right" class="bottom-action-slot"></div>
+        </footer>
+    </div>
+
+    <script src="js/core/contracts.js" defer></script>
+    <script src="js/audio/audio-bus.js" defer></script>
+    <script src="js/core/ui-state.js" defer></script>
+    <script src="js/core/catalog-validation.js" defer></script>
+    <script src="js/core/icon-registry.js" defer></script>
+    <script src="js/core/utils.js" defer></script>
+    <script src="js/core/state.js" defer></script>
+    <script src="js/features/shop.js" defer></script>
+    <script src="js/features/mascot.js" defer></script>
+    <script src="js/features/minigame.js" defer></script>
+    <script src="js/features/app.js" defer></script>
+</body>
+</html>
+
