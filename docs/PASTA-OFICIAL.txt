@@ -1,0 +1,15 @@
+PASTA OFICIAL DO PROJETO
+========================
+
+Todas as alteracoes do jogo devem ser feitas somente em:
+
+G:\IA\BA Mascote
+
+Estrutura principal usada:
+- index.html
+- css\
+- js\
+- docs\
+
+Observacao:
+Este projeto e a unica versao ativa do app.
