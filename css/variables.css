@@ -1,0 +1,32 @@
+:root {
+    --font-main: "Segoe UI", "Inter", "Trebuchet MS", Arial, sans-serif;
+
+    --ink: #111827;
+    --ink-soft: #475569;
+    --paper: #f8fafc;
+    --paper-deep: #e2e8f0;
+    --white: #ffffff;
+
+    --honey: #facc15;
+    --amber: #fb923c;
+    --lapis: #2563eb;
+    --cobalt: #06b6d4;
+    --madder: #e11d48;
+    --rose: #f472b6;
+    --verdigris: #10b981;
+    --violet: #7c3aed;
+    --charcoal: #0f172a;
+
+    --line: 1.25px solid rgba(15, 23, 42, .22);
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 22px;
+    --shadow-pop: 0 12px 26px rgba(15, 23, 42, 0.16);
+    --shadow-soft: 0 22px 48px rgba(15, 23, 42, 0.22);
+}
+
+.bg-bedroom { --room-a: #fef3c7; --room-b: #fb7185; --room-c: #fff7ed; }
+.bg-kitchen { --room-a: #ecfeff; --room-b: #10b981; --room-c: #fde68a; }
+.bg-bathroom { --room-a: #cffafe; --room-b: #0ea5e9; --room-c: #f0f9ff; }
+.bg-laboratory { --room-a: #eef2ff; --room-b: #7c3aed; --room-c: #fefce8; }
+.bg-game-room { --room-a: #fdf2f8; --room-b: #2563eb; --room-c: #fef08a; }
